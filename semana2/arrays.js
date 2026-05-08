@@ -1,13 +1,44 @@
-// let products = {
-//     name: 'Laptop',
-//     price: 1500,
-//     stock: 30,
-//     colors: ['Red', 'Blue', 'Green'],
-//     details: {
-//         weight: '2kg',
-//         dimensions: '30cm x 20cm x 2cm'
-//     }
+let products = {
+    id: 'a1b2c3',
+    name: 'Laptop',
+    price: 1500,
+    stock: 30,
+    colors: ['Red', 'Blue', 'Green'],
+    details: {
+        weight: '2kg',
+        dimensions: '30cm x 20cm x 2cm'
+    }
+};
+
+
+
+// for(let key in products){
+//     console.log(key + ': ' + JSON.stringify(products[key]));
 // }
+
+
+const Mapa = new Map();
+Mapa.set('id', 'a1b2c3');
+Mapa.set('name', 'Laptop');
+
+console.log(Mapa.get('name'));
+
+
+// for(let value of Object.values(products)){
+//     console.log(Object.keys(products)[Object.values(products).indexOf(value)] + ': ' + value);
+// }
+
+
+// const numbers = [10, 20, 30,30, 40, 50, 51];
+// const names = new Set(numbers);
+
+// names.add(60);
+// names.delete(20);
+
+// for(let name of names){
+//     console.log('-', name);
+// }
+
 
 // products.available = true;
 // delete products.stock;
