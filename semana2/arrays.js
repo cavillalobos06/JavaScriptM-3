@@ -10,47 +10,25 @@ let products = {
     }
 };
 
-const Mapa = new Map();
-Mapa.set('id', 'a1b2c3');
-Mapa.set('name', 'Laptop');
+let set = new Set([1,2,2,1,1,4,4,2,3,4]);
+set.add(5);
+set.delete(1);
+console.log(set);
+console.log(set.has(3));
 
-console.log(Mapa.get('name'));
+for(value of set){
+    console.log('-', value);
+}
+
+const Mapa = new Map();
+Mapa.set('ID', 'a1b2c3');
+Mapa.set('Category', 'Technology');
+Mapa.set('Name', 'Laptop');
+
+console.log(`ID: ${Mapa.get('ID')}, 
+Category: ${Mapa.get('Category')}, 
+Name: ${Mapa.get('Name')}`);
 
 
 const numbers = [10, 20, 30,30, 40, 50, 51];
 const names = new Set(numbers);
-
-names.add(60);
-names.delete(20);
-
-for(let name of names){
-    console.log('-', name);
-}
-
-// for(let value of Object.values(products)){
-//     console.log(Object.keys(products)[Object.values(products).indexOf(value)] + ': ' + value);
-// }
-
-
-
-
-
-
-// products.available = true;
-// delete products.stock;
-// console.log(products);
-
-
-// let person = {
-//     name: 'Camilo',
-//     lastName: 'Villalobos',
-
-//     fullName: function(){
-//         return `${this.name} ${this.lastName}`;
-//     },
-
-//     saludar: function(){
-//         console.log(`Hello ${this.fullName()}!`);
-//     }
-// }
-// person.saludar();
