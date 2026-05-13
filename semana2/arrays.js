@@ -20,6 +20,10 @@ for(value of set){
     console.log('-', value);
 }
 
+for(const key in products){
+    console.log(key);
+}
+
 const Mapa = new Map();
 Mapa.set('ID', 'a1b2c3');
 Mapa.set('Category', 'Technology');
@@ -30,5 +34,5 @@ Category: ${Mapa.get('Category')},
 Name: ${Mapa.get('Name')}`);
 
 
-const numbers = [10, 20, 30,30, 40, 50, 51];
-const names = new Set(numbers);
+// const numbers = [10, 20, 30,30, 40, 50, 51];
+// const names = new Set(numbers);
