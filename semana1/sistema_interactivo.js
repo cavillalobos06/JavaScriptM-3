@@ -1,7 +1,7 @@
 let nombre = "";
 while (!nombre || nombre.trim() === "") {
-    nombre = prompt('Ingresa tu nombre');
-    if (!nombre || nombre.trim() === "") {
+    nombre = prompt('Ingresa tu nombre'); // Solicita el nombre al usuario
+    if (!nombre || nombre.trim() === "") { // Verifica si el nombre es nulo, vacío o solo espacios
         console.error("El nombre no puede estar vacío. Por favor, ingresa al menos algo.");
     }
 }
@@ -10,7 +10,7 @@ let edad = 0;
 let entradaEdad;
 
 while (!edad) {
-    entradaEdad = prompt('Ingresa tu edad');
+    entradaEdad = prompt('Ingresa tu edad'); // Solicita la edad al usuario
 
     if (entradaEdad === null || entradaEdad.trim() === "") {
         console.error("Debes ingresar al menos algo en el campo de edad.");

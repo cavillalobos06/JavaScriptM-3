@@ -4,6 +4,9 @@ const list = document.getElementById('listaNotas');
 const father = document.querySelector('.padre');
 
 
+let notas = JSON.parse(localStorage.getItem('notas')) || [];
+console.log(`Notas cargadas: ${notas.length}`);
+
 btn.addEventListener('click', () => {
 
     if (input.value === '') {
@@ -23,8 +26,13 @@ btn.addEventListener('click', () => {
         element.append(deleteBtn);
         father.appendChild(element);
 
-        input.value = '';
-        console.log('Se agregó la nota');
 
+        notas.push(input.value);
+
+        localStorage.setItem("notas", JSON.stringify(notas));
+
+        input.value = '';
+
+        console.log('Se agregó la nota');
     }
 })
